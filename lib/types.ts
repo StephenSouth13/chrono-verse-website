@@ -46,3 +46,9 @@ export interface DevelopmentMilestone {
   description_en: string
   image?: string // Optional image for the milestone
 }
+
+export interface ChatMessage {
+  id: string
+  sender: "user" | "bot"
+  text: string
+}

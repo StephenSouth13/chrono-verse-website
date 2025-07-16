@@ -4,16 +4,16 @@ import { usePathname } from "next/navigation"
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { useLanguage } from "@/hooks/useLanguage"
-import { useSoundEffect } from "@/hooks/useSoundEffect"
+import { useLanguage } from "@/lib/i18n"
+import { useSoundEffect } from "@/hooks/use-sound-effect"
 import { motion } from "framer-motion"
 import { AnimatePresence } from "framer-motion"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Image } from "next/image"
+import Image from "next/image"
 import { X, MessageSquare, Send, Loader2 } from "lucide-react"
-import type { ChatMessage } from "@/types/chat"
+import type { ChatMessage } from "@/lib/types"
 
 const ChronoBot: React.FC = () => {
   const { t, lang } = useLanguage()
